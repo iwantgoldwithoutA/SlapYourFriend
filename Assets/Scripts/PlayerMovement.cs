@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        grounded = Physics.Raycast(transform.position, Vector3.down,0.5f, Ground);
+        
 
         MyInput();
 
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(fire1))
         {
             anim.SetBool("IsFire", true);
-           
+
         }
         else
         {
@@ -156,6 +156,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.transform.CompareTag("Ground"))
+        {
+            grounded = true;
+        }
+    }
+
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.CompareTag("Ground"))
+        {
+            grounded = false;
+        }
+    }
+
 }
 
