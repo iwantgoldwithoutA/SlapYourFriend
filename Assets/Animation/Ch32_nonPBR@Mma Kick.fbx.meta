@@ -58,16 +58,16 @@ ModelImporter:
       curves: []
       events:
       - time: 0.3780013
-        functionName: Attack
+        functionName: EnableCol
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: fd78554762c7b40498bab2aea5e68e6a, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.46584544
-        functionName: StopAttack
+        functionName: DisableCol
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: fd78554762c7b40498bab2aea5e68e6a, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

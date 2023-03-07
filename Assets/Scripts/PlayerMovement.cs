@@ -106,21 +106,18 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = 0;
         }
 
-        if (Input.GetKeyDown(fire1))
-        {
-            anim.SetBool("IsFire", true);
-
-        }
-        else
-        {
-            anim.SetBool("IsFire", false);
-        }
 
 
     }
     private void FixedUpdate()
     {
+
+      
         MovePlayer();
+       
+           
+
+        
 
         if (Input.GetKey(Space) && grounded)
         {

@@ -8,21 +8,31 @@ public class SlapControl : MonoBehaviour
     public GameObject Legs;
     public bool AttackReady = true;
     public float AttackCoolDown = 1.0f;
-    Animator Anim;
+    public Animator Anim;
 
-    public void Yaheuy()
+    public CapsuleCollider col;
+
+ 
+
+    public void Update()
     {
-        AttackReady = false;
-        Anim = Legs.GetComponent<Animator>();
-        Anim.SetBool("Isfire", true);
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Anim.SetBool("IsFire", true);
+        }
+        else 
+        {
+            Anim.SetBool("IsFire", false);
+        }
     }
 
-    IEnumerator ResetAttackCoolDown()
+    public void EnableCol()
     {
-        yield return new WaitForSeconds(AttackCoolDown);
-        Anim.SetBool("Isfire", false);
-        AttackReady = true;
+        col.enabled = true;  
     }
 
-    
+    public void DisableCol()
+    {
+        col.enabled = false;
+    }
 }
