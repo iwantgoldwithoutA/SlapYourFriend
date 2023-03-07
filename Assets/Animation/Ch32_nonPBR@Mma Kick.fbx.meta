@@ -57,7 +57,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.3780013
+      - time: 0.3427072
         functionName: EnableCol
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: fd78554762c7b40498bab2aea5e68e6a, type: 3}
